@@ -1,4 +1,10 @@
-.App {
+
+body{
   font-family: sans-serif;
-  text-align: center;
+    text-align: center;
+    min-height: 100vh;
+    background-color: #333;
+    margin: 0;
+    padding: 0;
+    color: cornflowerblue;
 }
