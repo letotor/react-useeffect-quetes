@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
 
-export default function Message({ isUserLoggedIn }) {
+export default function Message() {
 
   const sayGoodBye= ()=>{
     console.log('Bye')
   }
+
+
   useEffect(() =>{
-   isUserLoggedIn && console.log('user is logged in')
+   console.log('user is logged in')
     return sayGoodBye()
   }, [])
 
