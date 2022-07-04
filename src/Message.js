@@ -6,10 +6,10 @@ export default function Message() {
     console.log('Bye')
   }
 
-
+  
   useEffect(() =>{
-   console.log('user is logged in')
-    return sayGoodBye()
+  console.log('user is logged in')
+    return sayGoodBye
   }, [])
 
 
