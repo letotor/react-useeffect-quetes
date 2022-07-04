@@ -4,11 +4,11 @@ import './style.css';
 
 const   App = ()  =>{
   const [email, setEmail] = useState('')
-  const [isUserLoggedIn, SetIsUserLoggedIn] = useState(false)
+  const [isUserLoggedIn, setIsUserLoggedIn] = useState(false)
 
 
   useEffect(()=>{
-    // console.log("email has changed",email)
+   console.log("email has changed",email)
   }, [email])
 
   // useEffect(() => {
@@ -18,8 +18,8 @@ const   App = ()  =>{
 
   const handleSubmit = e => {
     e.preventDefault();
+    setIsUserLoggedIn(true)
     console.log('email submit',email)
-    SetIsUserLoggedIn(true)
   };
 
 
@@ -29,8 +29,8 @@ const   App = ()  =>{
   };
 
 
-  const hadnleClick = ()=>{
-    SetIsUserLoggedIn(false)
+  const handleClick = (e)=>{
+    setIsUserLoggedIn(false)
 
   }
 
@@ -43,10 +43,11 @@ const   App = ()  =>{
       </form>
     
     
-      {isUserLoggedIn ? 
+      {isUserLoggedIn && 
       <>
-        <Message isUserLoggedIn={isUserLoggedIn}/> <button onClick={hadnleClick}>Lougout</button>
-      </>:""}
+          <button onClick={(e) => handleClick(e)}>Lougout</button>
+        <Message/> 
+      </>}
     </div>
   );
 }

@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react';
 
 export default function Message({ isUserLoggedIn }) {
 
-  const sayGoodBy= ()=>{
+  const sayGoodBye= ()=>{
     console.log('Bye')
   }
   useEffect(() =>{
    isUserLoggedIn && console.log('user is logged in')
-    return sayGoodBy()
+    return sayGoodBye()
   }, [])
 
 
